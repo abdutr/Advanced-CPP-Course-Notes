@@ -86,11 +86,9 @@
 	
 // 	func2(5); // No copy here as well
 // 	func2(5); // No copy here as well
-// 	//auto m = MyClass3{ MyClass3{func2(7)} }; // this must not trigger copy as well
-// 	// but MSVC sucks again I guess it calls it for me.
-
+// 	auto m = MyClass3{ MyClass3{func2(7)} }; // this must not trigger copy as well
+// 	// but MSVC may do it because of bug
 // 	// With C++17 (unnamed) Return Value Optimization is no longer compiler optimization
 // 	// It happens as a result of passing unmaterialized object and only 
-
 // 	//Named  Return  Value optimization is still compiler optimiation.
 // }
