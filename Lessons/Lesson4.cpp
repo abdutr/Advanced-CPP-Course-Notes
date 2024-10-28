@@ -26,7 +26,7 @@
 // // universal reference
 // template<typename T>
 // void func(T&& arg){ 
-//   // We can if value sent here is const or not, lvalue or rvalue using T
+//   // We can check if value sent here is const or not, lvalue or rvalue using T
 //   // We can also check it using arg (so abbreviated function templates can use
 //   // this technique)
 

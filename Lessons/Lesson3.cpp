@@ -99,8 +99,8 @@
 
 //   // Above first 3 elements are copied instead of moved reason
 //   // is move constructor is not noexcept . Why ? Because push_back
-//   // is gives strong guarantee, if moves fails we cant rollback to
-//   // prior state, so copy is used if copy fails no issue .
+//   // gives strong guarantee, if moves fail we cant rollback to
+//   // prior state, so copy is used, if copy fails no issue .
 
 //   // Uncomment code with noexcept move constructor to see elemets being moved.
 

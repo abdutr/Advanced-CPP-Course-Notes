@@ -86,6 +86,7 @@
 	
 // 	func2(5); // No copy here as well
 // 	func2(5); // No copy here as well
+//     std::cout<< "How Many MyClass3 will be constructed ? \n";  // 1
 // 	auto m = MyClass3{ MyClass3{func2(7)} }; // this must not trigger copy as well
 // 	// but MSVC may do it because of bug
 // 	// With C++17 (unnamed) Return Value Optimization is no longer compiler optimization

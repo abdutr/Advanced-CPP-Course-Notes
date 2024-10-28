@@ -82,7 +82,7 @@
 // 	printValueCategory(fooint);
 // 	printValueCategory(barintref);
 // 	printValueCategory(std::move(x));
-// 	printValueCategory(std::move(foointrefref)); // This is still LValue (some version has MSVC has bug)
+// 	printValueCategory(std::move(foointrefref)); // This is still LValue (some version of MSVC has bug saying XValue)
 // 	printValueCategory(nullptr);
 // 	printValueCategory(Abdu{});
 // 	printValueCategory([] {return 1; }); // Same with line above this is just temporary object of class xxxyyyzz
