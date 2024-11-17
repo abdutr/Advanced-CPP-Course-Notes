@@ -90,7 +90,7 @@
 //     auto vec  = "123 312/2"_v;
 //     std::cout << "vec size : " << vec.size() << "\n";   
 
-//     print(vec);
+//     utils::print(vec);
 
 //     Meter m = 123.456_mt;
 //     // Meter nonValid = 123.456; // This will not compile, due to constructor

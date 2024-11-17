@@ -1,5 +1,7 @@
 #include <iostream>
 
+namespace utils{
+
 template<typename Container>
 void print(Container& container){
   for(auto val:container){
@@ -7,3 +9,6 @@ void print(Container& container){
   }
   std::cout << "\n";
 }
+
+} // namespace utils
+

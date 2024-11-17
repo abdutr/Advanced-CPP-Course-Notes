@@ -184,9 +184,9 @@
 //   std::iota(ivec.begin(), ivec.end(), 0); 
 //   // Fills ivec with    0,1,2,3,4,5,6,7,8,9
 //   // Lets saw we want:      0,1,2,3,4
-//   print(ivec);
+//   utils::print(ivec);
 //   std::copy_backward(ivec.begin(),ivec.begin()+5,ivec.begin()+7);
-//   print(ivec);
+//   utils::print(ivec);
 //   // normal copy ( forward one) could not be used here, it would overwrite copied data
 
 //   // std::move_iterator<std::vector<int>::iterator> moveIter(ivec.begin());
@@ -199,7 +199,7 @@
 //   std::vector<std::string> svec{"a","b","c"};
 
 //   std::vector<std::string> svec2{std::move_iterator{svec.begin()},std::move_iterator{svec.end()}};
-//   print(svec);  // svec strings are now empty; 
+//   utils::print(svec);  // svec strings are now empty; 
 
 //   std::vector<std::string> svec3{"abc","bcd","cdf"};
 //   //Need to be careful with move iterators:
