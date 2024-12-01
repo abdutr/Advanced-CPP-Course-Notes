@@ -1,5 +1,5 @@
-cmake --preset=debug/release
 cd build
+cmake --preset=debug/release ..
 cmake --build .
 
 ./advancedCpp
