@@ -92,7 +92,7 @@ public:
         // must return location of } 
     }
 
-     constexpr auto format(const Person& person,std::format_context& ctx){
+     constexpr auto format(const Person& person,std::format_context& ctx) const{
         using enum FormatType;
         switch(mFType){
             case Name: return format_to(ctx.out(),"{}", person.getName());
@@ -281,7 +281,7 @@ auto main() -> int {
 
     // To support format for custom type we need explicit specialization for std::formatter
     Person a{"Abdu",1};
-    cout << format("{:n}",a);
-    cout << format("{:i}",a);
-    cout << format("{:a}",a);
+    cout << format("{:n}\n",a);
+    cout << format("{:i}\n",a);
+    cout << format("{:a}\n",a);
 }
