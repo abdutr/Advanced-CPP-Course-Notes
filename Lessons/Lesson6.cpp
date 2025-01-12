@@ -91,7 +91,7 @@
 // }
 
 // template<typename Iter>
-// typename std::move_iterator<Iter> MakeMoveIterator(Iter iter){
+// std::move_iterator<Iter> MakeMoveIterator(Iter iter){
 //   return std::move_iterator<Iter>(iter);
 // }
 
@@ -146,7 +146,7 @@
 //   Abdu a{1};
 //   Abdu b =(1);
 //   Abdu c{1,2,3,4,5};
-//     Abdu d ={1};
+//   Abdu d ={1};
 
 //   std::cout << std::vector<int>{1,5}.size() << "\n";
 //   std::cout << std::vector<int>(10,5).size() << "\n";
@@ -214,6 +214,7 @@
 
 //   // auto svVar="abdu"sv;
 //   using namespace std::chrono_literals;
+//   std::chrono_literals::operator""ms(734);
 //   734ms;// kind of can be seen as operator called literal operator
 //   // Literal operator can only take basic types, no user defined types
 //   // user defined ones must start with _

@@ -82,12 +82,20 @@
 
 // MyClass ReturnMyClass() { return MyClass{}; }
 
+// int&& returnIntRefRef(){
+//     return 5;
+// }
+
+// int returnInt(){
+//     return 5;
+// }
+
 // auto main() -> int {
 //   const std::string constStr = "const";
 //   std::string nonConstStr = "nonconst";
 //   processContainer(constStr);
 //   processContainer(nonConstStr);
-//   // func("Abdu","Ali"); ;// inputs are different type , const chart[4]/[5]
+//   // func("Abdu","Ali"); ;// inputs are different type , const chart[4]/[5] 
 //   // error ambiguity
 //   func("Abdu", "Alex"); // Both are const char[4], with reference types function
 //                         // decay to pointer does not happen

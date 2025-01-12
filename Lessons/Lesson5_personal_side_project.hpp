@@ -20,8 +20,8 @@
 //                                       std::forward<Args>(args)...)};
 //     const auto finish = std::chrono::high_resolution_clock::now();
 //     const auto function_runtime{
-//         std::chrono::duration<Rep, Period>(finish - start)};
-//     return (std::pair<std::invoke_result_t<Callable, Args...>,
+//         // std::chrono::duration<Rep, Period>(finish - start)};
+//     return (std::pair<std::invoke_result_t<Callable, Args...>, // Instead constexpr if else should be used like main lesson5.cpp
 //                      std::chrono::duration<Rep, Period>>(
 //         std::forward<decltype(result)>(result), function_runtime));
 //   }

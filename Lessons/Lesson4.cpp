@@ -70,13 +70,13 @@
 //   static_assert(!std::is_lvalue_reference_v<T>,"Can not forward rvalue as an lvalue.");
 //   return static_cast<T&&>(t);
 // }
-// // This prevent forwarding rvalue as lvalue, example below, but when does this run ? 
-// // There can be many cases to use forward other than perfect forwarding, so this is not
-// // template<class T>
-// // void wrapper(T&& arg)
-// // {
-// //     foo(forward<decltype(forward<T>(arg).get())>(forward<T>(arg).get()));
-// // }
+// This prevent forwarding rvalue as lvalue, example below, but when does this run ? 
+// There can be many cases to use forward other than perfect forwarding, so this is not
+// template<class T>
+// void wrapper(T&& arg)
+// {
+//     foo(forward<decltype(forward<T>(arg).get())>(forward<T>(arg).get()));
+// }
 
 
 // template<typename T>

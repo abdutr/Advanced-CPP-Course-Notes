@@ -176,7 +176,6 @@
 //     double b[10]{};
 //     Pair p(a,b); // Without deduction guide : T = int[10] U = double[10], so we can not initialize array[10] with = 
 //     // cannot initialize an array element of type 'double/int' with an lvalue of type 'const double/int[10]'
-
 //     // if constructor was Pair(T t,U u). this works as deduction will be int/double*
 //     // With deduction guide , T = int* , U = double*
 
