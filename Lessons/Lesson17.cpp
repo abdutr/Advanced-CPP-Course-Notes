@@ -300,7 +300,7 @@
 //    // Though compilers may have it defined as noDiscard,above was noDiscard with MSVC, but ok with my Clang env.
 
 //    // Concepts ###########
-//    // Used to constaint templates, improve error messages, reduce compile time load
+//    // Used to constraint templates, improve error messages, reduce compile time load
 //    // Most importantly to avoid SFINAE
 //    numberFunc(5);
 //    numberFunc(6.7);
