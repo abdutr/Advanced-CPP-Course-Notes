@@ -103,7 +103,7 @@
 // private:
 //     string name;
 //     int age;
-//     double salary;
+//     double salary{};
 // public:
 //     Person(const char*p , int a, double s ):name{p},age{a}, salary{s}{}
 //     // auto operator<=>(const Person& other){
@@ -142,7 +142,7 @@
 //     using ArrayTpType = std::array<double,20>;
 //     constexpr auto numOfTypes = tuple_size_v<TpType>;
 //     tuple_element_t<0,TpType> a; // int
-//     tuple_element_t<4,ArrayTpType> b; // int
+//     tuple_element_t<4,ArrayTpType> b; // double
 
 //     auto [x,y] = make_tuple(10,4.5);
 //     auto f = [x,y] {return x+y;};// Does not work c++17, works fine with c++ 20, 
@@ -233,9 +233,8 @@
 //     printCompare(6.7,6.7);
 //     printCompare(6.7,NAN);
 
-//     Person p1{"john",12};
-//     Person p2{"abdu",12};
-
+//     Person p1{"john",12,5.6};
+//     Person p2{"abdu",12,7.8};
 //     fmt::print("{}\n" , p1 > p2);
 
 // }

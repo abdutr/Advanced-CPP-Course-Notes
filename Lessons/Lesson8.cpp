@@ -204,6 +204,7 @@
 //     variant<monostate,int,double,string> var10;
 //     cout << var10.index() << "\n"; // 0
 //     cout << "std::holds_alternative<monostate>(var10): "<< std::holds_alternative<monostate>(var10)<< "\n"; // 1
+//     auto monostateVal =   get_if<monostate>(&var10);
 //     cout << get_if<monostate>(&var10)<< "\n"; // 0
 
 //     var10 = monostate{};

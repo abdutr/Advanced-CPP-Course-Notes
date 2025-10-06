@@ -154,7 +154,7 @@
 
 //     // Lets say we want some function to be called once
 //     Abdu abdu1;
-//     Abdu abdu2;
+//     Abdu abdu2;  
 
 //     // default constructor and copy constructor of lambdas are no longer deleted with C++20
 //     // Above is Only true for stateless lambdas

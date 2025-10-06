@@ -27,7 +27,7 @@
 //     }
 // };
 
-// // Variant can be used for inheritance, unline unions
+// // Variant can be used for inheritance, unlike unions
 // class Derived : public variant<int,string>{};
 
 // struct A{

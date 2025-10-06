@@ -118,7 +118,7 @@
 
 // // requires clause with requires expression + concept
 // template <typename T>
-// requires (sizeof(T) > 2) &&
+// requires (sizeof(T) > 2) && (sizeof(T) < 16) &&
 // requires {typename T::size_type;} &&  // Requires expression
 // input_iterator<T> // Concept
 // class ConstrainedClass{};
@@ -159,7 +159,6 @@
 // template<typename T>
 // requires as_int<T>
 // int intConvertibleTakingFunction(){return 0;}
-
 
 // // or 
 
@@ -393,6 +392,5 @@
    
 //    constexpr auto canBeTemplateTypeForAdditive2 = Alex<int>; // True
 //    constexpr auto canBeTemplateTypeForAdditive2_2 = Alex<char>; // False as Additive2 type size > 2
-
 
 // }

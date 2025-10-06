@@ -37,8 +37,8 @@
 
 // class MyClass {};
 
-// void foo(MyClass &) {}
-// void foo(MyClass &&) {}
+// void foo(MyClass &) {std::cout <<"Called MyClass &\n";}
+// void foo(MyClass &&) {std::cout <<"Called MyClass &&\n";}
 // // Assume const versions are also defined
 
 // template <typename C, typename T> 
@@ -191,6 +191,6 @@
 //   // operator=(const MyClass& other)& = default; // This would prevent
 //   // assignment to rvalue & specifier.
 
-//   testBenchmark();
+// //   testBenchmark();
 //   return 0;
 // }

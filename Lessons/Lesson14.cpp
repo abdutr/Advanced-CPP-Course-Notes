@@ -182,8 +182,58 @@
 //     cout <<"\n";
 
 
-//     // Format specifier is like this ; 
-//     // [[fill]align] [sign][#][0][width][.precision][type]
+// // Format specifier syntax:
+// // {index:[[fill]align][sign][#][0][width][.precision][type]}
+
+// /*
+// 1. [fill]align - Controls alignment and fill character
+//    fill: any character
+//    align: < (left), > (right), ^ (center), = (pad after sign)
+//    Example: {:*>10} - right align, fill with *
+
+// 2. [sign] - Controls sign display
+//    +    - show sign for both positive and negative
+//    -    - show sign only for negative (default)
+//    space - show space for positive, minus for negative
+
+// 3. [#] - Alternative form
+//    - For hex/binary: adds prefix (0x/0b)
+//    - For floating point: always shows decimal point
+   
+// 4. [0] - Zero padding
+//    - Pads with zeros instead of spaces
+//    - Same as using [fill]align with '0='
+
+// 5. [width] - Minimum field width
+//    - Positive number
+//    - Can use {} for dynamic width from arguments
+
+// 6. [.precision] - Precision for floating point/string
+//    - For float: number of decimal places
+//    - For string: maximum length
+//    - Can use .{} for dynamic precision
+
+// 7. [type] - Type specifier
+//    Integers:
+//    - d     - decimal
+//    - b     - binary
+//    - B     - binary with 0B prefix
+//    - x/X   - hex (lower/upper case)
+//    - o     - octal
+   
+//    Floating point:
+//    - f/F   - fixed point
+//    - e/E   - scientific
+//    - g/G   - general format (default)
+//    - a/A   - hex float
+   
+//    Other:
+//    - c     - character
+//    - s     - string (default for strings)
+//    - p     - pointer
+//    - L     - locale-specific formatting
+// */
+
 //     // # enables show base mode when used together with type
 //     // {3:_<}
 //     // default fill is empty space, above we used _

@@ -137,8 +137,12 @@
 
 //     auto one = [i=0]() -> decltype(i){return 1;}();
 //     auto isSame = std::is_same_v<decltype(one), int>;
-//     fmt::print("std::is_same_v<decltype(one), int>: {}\n", isSame);
-    
+
+//     // When two prints below is written in a single line breaks vscode + clangd highlighting for some reason
+//     // That is why they are seperate, no other real reason.
+//     fmt::print("  std::is_same_v<decltype(one), int>:");
+//     fmt::print("{}\n",isSame);
+
 //     // If lambda does not capture anything then it is stateless lambda.
 //     // [] <TemplateParams> (parameter list) specifiers exception attr -> retType {code}
 //     // <TemplateParams>  is added with C++20, optional
