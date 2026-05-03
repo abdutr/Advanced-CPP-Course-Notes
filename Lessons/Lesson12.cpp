@@ -79,9 +79,9 @@
 //     int mx{},my{};
 
 //     void foo(){
-//         // To have access to local member variables this needs to be captures
-//         // = could be used , but not good, deprecated with c++20, this would copy ptr so changes in member vairables
-//         // would affect the original value, = gives wrong impression that it is copy, so member var wont be affected
+//         // To have access to local member variables this needs to capture this
+//         // = could be used, but not good; deprecated with C++20, this would copy the pointer so changes in member variables
+//         // would affect the original value; = gives the wrong impression that it is a copy, so the member variable won't be affected
 //         // [=,this] is also allowed with C++20
 //         auto f = [this](int val){
 //             return val *mx + my;
@@ -133,13 +133,13 @@
 //     // [ten = ten] -> init capture, so decltype(ten) wont be const even if right side is const
 //     // auto f = [ten]() mutable { ++ten;}; // Syntax error: ten will be const member of lambda class, cant increment,
 //     // auto g = [ten = ten]() {++ten;}; //  Syntax error: Cannot assign to a variable captured by copy in a non-mutable lambda
-//     auto h = [ten=ten]() mutable {++ten;}; // OK, functions is non const( mutable) and ten is not const
+//     auto h = [ten=ten]() mutable {++ten;}; // OK, function is non-const (mutable) and ten is not const
 
 //     auto one = [i=0]() -> decltype(i){return 1;}();
 //     auto isSame = std::is_same_v<decltype(one), int>;
 
-//     // When two prints below is written in a single line breaks vscode + clangd highlighting for some reason
-//     // That is why they are seperate, no other real reason.
+//     // When the two prints below are written on a single line, it breaks vscode + clangd highlighting for some reason
+//     // That is why they are separate, no other real reason.
 //     fmt::print("  std::is_same_v<decltype(one), int>:");
 //     fmt::print("{}\n",isSame);
 
@@ -152,7 +152,7 @@
 //     auto lamd2 = [] (int x) { return x*7;};// Automatically constexpr if it is possible
 //     constexpr auto val = lamd(5);
 //     constexpr auto val2 = lamd2(5);
-//     // Each lamda  type is unique
+//     // Each lambda type is unique
 //     // const auto lamd = [] (int x) { return x*7;};
 //     const auto lamd3 = [] (int x) { return x*7;};
 //     constexpr auto isSameType = is_same_v<decltype(lamd),decltype(lamd3)>;  // False
@@ -174,11 +174,11 @@
 //         using ptrType = decltype(arr); // ptrType = int*, decay here;
 //     };
 
-//     // For reference captured variable there is no need for mutable in lamda declaration
+//     // For a reference-captured variable there is no need for mutable in the lambda declaration
 //     // , we can modify them without value, as we are changing the referenced value, not the reference itself
 
 //     auto uptr = make_unique<std::string> ( 10'000,'a');
-//     // Move cases need init capture , otherwise cant be moved to lambda.
+//     // Move cases need init capture; otherwise they cannot be moved into the lambda.
 //     auto lambda7 = [uptr = move(uptr)]  () mutable{
 //         *uptr = "Abcd";};
 

@@ -38,7 +38,7 @@
 
 //  constinit int var = 5; // Must be constant initialized, otherwise syntax error
 //  // constinit = constexpr - const
-//  // constexpr variables are const by default, so constinit is initialized with consexpr but variable is not constant 
+//  // constexpr variables are const by default, so constinit is initialized with constexpr but the variable is not constant 
 
 // class [[nodiscard]] MyClass{ // return value from Functions returning MyClass must not be discarded
 // public:
@@ -80,7 +80,7 @@
 
 // // Concept is also a new keyword C++20
 
-// //Before concepts, it is tricky to do simple integral check.
+// // Before concepts, it is tricky to do a simple integral check.
 // // 3 options with SFINAE
 // template<typename T,enable_if_t<is_integral_v<T>>* = nullptr >
 // void foo1(T){
@@ -98,12 +98,12 @@
 //    cout << t;
 // }
 
-// // 3 tool: 
+// // 3 tools:
 // // requires clause
 // //       prefix
 // //       trailing
 // // requires expression
-// // named constraints ==> concep
+// // named constraints ==> concept
 
 // // requires <compileTimeboolean>
 
@@ -227,7 +227,7 @@
 // concept Abdu = requires (T x){
 //    // simple requirements, will check if following is valid ( not a syntax error)
 //    x++;
-//    is_integral_v<T>; // Can be be checked with is_integral, not checking if T is integral or not  !!!
+//    is_integral_v<T>; // Can be checked with is_integral, not checking if T is integral or not !!!
 //    // x == nullptr;  // is x comparable with nullptr 
 // };
 
@@ -243,7 +243,7 @@
 // };
 
 
-// // Requires expression can be used with requires claus, can be also used outside concept definition
+// // Requires expression can be used with a requires clause; it can also be used outside concept definition
 // template<typename T>
 // requires requires(T x){
 //     x+x;
@@ -288,18 +288,18 @@
 //    int a = 5;
 //    // auto y = baz(a); // Syntax error must be compile time
 //    var = 7; // Var is not constant so we can reassign ( it is constinit C++20)
-//    // constinit int localVar = 5; // COnstinit cant be used like this : Local variable cannot be declared 'constinit'
+//    // constinit int localVar = 5; // constinit can't be used like this: local variable cannot be declared 'constinit'
 
 //    noDiscardFunc2();
 //    // warning: ignoring return value of function declared with 'nodiscard' attribute: noDiscardFunc2 should not be discarded [-Wunused-result]
 //    myClassReturningFunc();  // ignoring return value of function declared with 'nodiscard' attribute
 
 //    vector vec{3,5,7,1};
-//    max_element(vec.begin(),vec.end()); // Stardard may not define functions as noDiscard even if you expect it
+//    max_element(vec.begin(),vec.end()); // Standard may not define functions as noDiscard even if you expect it
 //    // Though compilers may have it defined as noDiscard,above was noDiscard with MSVC, but ok with my Clang env.
 
 //    // Concepts ###########
-//    // Used to constraint templates, improve error messages, reduce compile time load
+//    // Used to constrain templates, improve error messages, reduce compile-time load
 //    // Most importantly to avoid SFINAE
 //    numberFunc(5);
 //    numberFunc(6.7);

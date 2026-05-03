@@ -126,7 +126,7 @@
 // }
 
 // auto main() -> int {
-//     // ranges::sort is a contexpr object, so we are calling operator() on sort object
+//     // ranges::sort is a constexpr object, so we are calling operator() on the sort object
 //     // ranges::sort()
 //     // Why this is done like this ? To support ADL, avoiding issues with function object lookup
 //     fmt::print("{}\n",typeid(ranges::sort).name()); // clang has garbled name NSt6ranges9__sort_fnE
@@ -135,7 +135,7 @@
 //     // Ranges have different parametric structure
 
 //     // begin and end does not need to be same type.
-//     // if begin and end are same time, then this is called common range( there is related concept as well)
+//     // if begin and end are the same type, then this is called a common range (there is a related concept as well)
 //     vector<int> ivec{3,56,8,3,2,1};
 //     counted_iterator iter{ivec.begin(),3}; // This iter can be incremented 3 times
 
@@ -179,8 +179,8 @@
 //     // here iota creates val from 0-100 so we are sure, no infinite loop
 //     auto searchedIter = ranges::find(ivec3.begin(),UnreachableSentinel,searchedVal);
 //     fmt::print("7 is found at index {}\n",searchedIter - ivec3.begin());
-//     // for_each (non ranges version) returns the calleable
-//     // Ranges for each is different, returns calleable fun and iterator as well
+//     // for_each (non-ranges version) returns the callable
+//     // ranges::for_each is different; it returns the callable functor and the iterator as well
 
 //     vector vec{3,5,7,2,1};
 //     auto result = ranges::for_each(vec,[](int x){ fmt::print("{}",x);});
@@ -207,7 +207,7 @@
 //     MyClass *myclassObj2 = new MyClass;
 //     ((*myclassObj2).*fp)(7);
 
-//     // Invoke is much more easier and help alleviate many issues in generic programming
+//     // invoke is much easier and helps alleviate many issues in generic programming
 //     invoke(fp,myclassObj,8);
 //     invoke(fp,myclassObj2,9); // We can pass address of object without referencing here , it works
 

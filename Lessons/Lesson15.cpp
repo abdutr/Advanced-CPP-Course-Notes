@@ -115,8 +115,8 @@
 
 // //Aggregate rules for C++20 ( it is different between versions)
 // // Aggregates cant have user declared constructor ( C++20)
-// // Public inherirance can exist
-// // If Provate/Protected  inheritance is used then no longer aggregate. 
+// // Public inheritance can exist
+// // If private/protected inheritance is used then it is no longer an aggregate.
 // // Base class does not need to be aggregate type, still derived is aggregate
 // // Virtual inheritance/functions breaks being aggregate, cant have virtual inheritance
 // // Multiple inheritance is ok, does not break aggregate
@@ -127,7 +127,7 @@
 //     double e1,e2,e3;
 // };
 
-// // Aggregate, no information hiding, no enforsing invariants etc.
+// // Aggregate, no information hiding, no enforcing invariants, etc.
 // struct Point{
 //     int x, y;
 // };
@@ -164,7 +164,7 @@
 //     int bar(); // Having private/protected functions does not break being aggregate
 // private:
 //     int baz();
-//     // Thought it cant have virtual function
+//     // Though it can't have a virtual function
 
 //     Abdu4 operator+(const Abdu4&); // No problem having operator overload
 // };
@@ -216,7 +216,7 @@
 //     cout << format("|{:_>24}|\n",Fruit::orange);
 
 //     // All examples before and Lesson 14 expects constexpr format specifying text
-//     // For non constexpr we use vformat
+//     // For non-constexpr we use vformat
 
 //     string formatStr = "|{:<5}|";
 //     // auto resultStr = format(formatStr,345); // Not valid 
@@ -236,7 +236,7 @@
 //     // static_assert(std::is_aggregate_v<Abdu3>,"not an aggregate"); // Not aggregate
 //     static_assert(std::is_aggregate_v<Abdu4>,"not an aggregate"); 
 //     // static_assert(std::is_aggregate_v<Abdu5>,"not an aggregate");// Not aggregate
-//     // static_assert(is_aggregate_v<decltype([](){})>) // Lammbda class types are not aggregate
+//     // static_assert(is_aggregate_v<decltype([](){})>) // Lambda class types are not aggregate
 //     // But we can inherit from lambda classes and that may be aggregate.
 
 

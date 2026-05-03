@@ -2,7 +2,7 @@
 // #include <iostream>
 // #include <vector>
 // #include <type_traits>
-// // Causes link error if cant RVOzed , so can use this pattern for the class if
+// // Causes a link error if it cannot be RVO'd, so this pattern can be used for the class if
 // // possible
 // class force_rvo {
 // public:
@@ -33,7 +33,7 @@
 //   // Some code
 
 //   return std::move(x); // This blocks copy elision and forces move , harmful
-//   // Depending on compiler this can be optimized , if cant it is moved anyway
+//   // Depending on the compiler this can be optimized; if it cannot, it is moved anyway
 //   // so forcing move is harmful
 // }
 
@@ -99,10 +99,10 @@
 
 //   // Above first 3 elements are copied instead of moved reason
 //   // is move constructor is not noexcept . Why ? Because push_back
-//   // gives strong guarantee, if moves fail we cant rollback to
+//   // gives a strong guarantee; if moves fail we cannot roll back to
 //   // prior state, so copy is used, if copy fails no issue .
 
-//   // Uncomment code with noexcept move constructor to see elemets being moved.
+//   // Uncomment the code with noexcept move constructor to see elements being moved.
 
 //   return 0;
 // }

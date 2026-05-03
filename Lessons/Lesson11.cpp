@@ -95,7 +95,7 @@
 //     }  else if ( result < 0){
 //         fmt::print("Less \n");
 //     } else {
-//         fmt::print("Orordered\n");
+//         fmt::print("Unordered\n");
 //     }
 // }
 
@@ -182,9 +182,9 @@
 //         fmt::print("Incorrect\n");
 //     }
 
-//     auto doubleComparsionResult = 9.0 <=> 10.0; // std::partial_ordering
+//     auto doubleComparisonResult = 9.0 <=> 10.0; // std::partial_ordering
 
-//     // With C++20 now == and <=> are primary operators, while !=, < , > ,<= , >= atr secondary
+//     // With C++20 now == and <=> are primary operators, while !=, <, >, <=, >= are secondary
 //     // If primary operator is defined all secondaries can be called without defining them
 //     // Secondaries can be rewritten by using primaries.
     

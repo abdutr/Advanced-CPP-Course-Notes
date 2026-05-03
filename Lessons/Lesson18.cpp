@@ -36,7 +36,7 @@
 // class MyClass{};
 
 // template<typename T>
-// concept Abdu = requires(T x){ // 3type requirements
+// concept Abdu = requires(T x){ // 3 type requirements
 //    x.foo(); // Simple Requirement
 //    *x;
 //    typename T::value_type; // Type Requirement
@@ -47,7 +47,7 @@
 
 // template <typename T>
 // concept cabdu = requires(T::value_type){ // Another way to check if T::value_type exists
-//    true; // Here cant be empty so we just added true
+//    true; // Here it cannot be empty so we just added true
 // };
 
 // template<typename T>
@@ -162,7 +162,7 @@
 //    constexpr auto hasNoexceptFooFunc4 = Abdu3<C>;
 
 //    // Concepts can be used :
-//    // 1.in any template contraint context that expects boolean
+//    // 1. in any template constraint context that expects boolean
 //    //    Function/Class template -> requires Concept<T>
 //    // 2. Defining another concept
 //    //    concept c1 = integral<T> && HasFoo<T>

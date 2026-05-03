@@ -37,8 +37,8 @@
 
 // class MyClass {
 // private:
-// 	// Inclass initializer or default member initializer, if not initialized in constructor 
-// 	// this values are used, if = default is used, values are also initialized via default 
+// 	// In-class initializer or default member initializer, if not initialized in the constructor
+// 	// these values are used; if = default is used, values are also initialized via the default
 // 	// member initializer
 // 	int mx{};
 // 	std::string mname{ "NoName yet" };
@@ -68,7 +68,7 @@
 // }
 
 // auto main() -> int { 
-// 	RemoveReference<int&&>::type x{}; // This was unvalid before after c++20 it is ok
+// 	RemoveReference<int&&>::type x{}; // This was invalid before; after C++20 it is ok
 // 	typename RemoveReference<int&&>::type x2{}; // typename was needed before c++20
 // 	constexpr auto b = noexcept(std::cout << 1); // Will not be printed, unevaluated context
 
@@ -91,5 +91,5 @@
 // 	// but MSVC may do it because of bug
 // 	// With C++17 (unnamed) Return Value Optimization is no longer compiler optimization
 // 	// It happens as a result of passing unmaterialized object and only 
-// 	//Named  Return  Value optimization is still compiler optimiation.
+// 	// Named Return Value Optimization is still a compiler optimization.
 // }

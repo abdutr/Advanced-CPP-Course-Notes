@@ -32,7 +32,7 @@
 //     return os;
 //  }
 
-// //  std::ostream& Seperated(std::ostream& os, int count=30){
+// //  std::ostream& Separated(std::ostream& os, int count=30){
 // //     os << "\n" << string(count,'-') << "\n";
 // //     return os;
 // //  }
@@ -110,7 +110,7 @@
 // auto main() -> int {
 // /*
 //     C had 
-//     prinf(const char*pfm,...)
+//     printf(const char*pfm,...)
 //     sprintf(char *buf,char *pfm,...)
 //     fprintf(FILE8,const char* pfm,...)
 
@@ -160,7 +160,7 @@
 //     */
 
 //     cout << 36752  << " " << Hex << 36752 << "\n"; 
-//     // for manipualtor custom objects can be used when parameters are needed like below : 
+//     // for manipulators custom objects can be used when parameters are needed like below:
 //     cout << 36752  << " " << Seperated(25) << 36752 << "\n"; 
 
 //     // Still iostream is slow and complex, hideous
@@ -237,7 +237,7 @@
 //     // # enables show base mode when used together with type
 //     // {3:_<}
 //     // default fill is empty space, above we used _
-//     //for alignemnt <(left) or >(right) or ^(middle) , default alignment is different for different types.
+//     // for alignment <(left) or >(right) or ^(middle), default alignment is different for different types.
 //     int x{4680};
 //     cout << format("|{{{}}}|\n",x);
 //     cout << format("|{:12}|\n",x);
@@ -296,7 +296,7 @@
 //     format_to(back_inserter(str),"|{:^#16X}|\n",num); // Writes to given address/iter
 //     cout << format("{}",str);
 //     cout.clear(); 
-//     // There us locale support for format
+//     // There is locale support for format
 //     cout.setf(ios::dec);
 //     cout << 123.456 << "\n";
 //     cout << 345 << "\n";
@@ -308,8 +308,8 @@
 
 //     cout << format("{:L}\n",4.56);
 
-//     // Locale can be send to format as well
-//     // cout << format(std::locale("turkish"),"|{}|",4.56); // Works but dont know current supported locales
+//     // Locale can be sent to format as well
+//     // cout << format(std::locale("turkish"),"|{}|",4.56); // Works but don't know currently supported locales
 
 //     int bigNum = 2134346346;
 //     // Length of str if it was created with provided format

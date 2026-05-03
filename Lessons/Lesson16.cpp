@@ -186,7 +186,7 @@
 //     Lazy<int> lazyX;
 //     Lazy<int> lazyY;
 //     lazyX.get()++;
-//     cout << lazyY.get() << "\n"; // LazyX/Y are same , how can we get differen lazy<int> ? 
+//     cout << lazyY.get() << "\n"; // LazyX/Y are the same, how can we get different Lazy<int> types? 
 
 //     // This compiles, kind of forward declaration, IncompleteAbdu is incomplete type
 //     struct IncompleteAbdu *p = nullptr; 
@@ -202,7 +202,7 @@
 //     LazyImproved<int> lazyImprovedY; // Both are different , no need for tag !
 
 //     int xVal = constexprFunc(5); // No guarantee that it will run on compile time
-//     constexpr int constexprX = constexprFunc(7); // Compuile time
+//     constexpr int constexprX = constexprFunc(7); // Compile time
 
 
 //     // constexpr int valOfIdx20 = getVal(20); // Syntax error : cannot refer to element 20 of array of 7 elements in a constant expression
@@ -240,7 +240,7 @@
 //     // Global variables and static member/nonmember variables have static storage
 //     // Lifetime and storage duration are related but not same.
 //     // Static local variables have static storage, but their lifetime starts when parent function is called
-//     // Global varibles are initialized in two phases
+//     // Global variables are initialized in two phases
 //     // Static init : Memory is set to 0
 //     // Dynamic init : initialization expression is executed
 

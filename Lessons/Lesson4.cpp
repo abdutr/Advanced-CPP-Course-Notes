@@ -121,7 +121,7 @@
 // template<typename StringLike>
 // void StringAcceptingFunc(StringLike&& str) { 
 // // we may want to have function which accept string, but want to know if type is l/rvalue and 
-// // know constness details, so we can still use universal referece, but will need to constrain
+// // know constness details, so we can still use a universal reference, but will need to constrain
 // // template type with enable_if or C++20 requires
 // }
 // auto main() -> int {
@@ -136,6 +136,6 @@
 
 //   // Static assert protects from incorrectly calling the case below
 //   // forward_actual_libgcc<Abdu&>(Abdu{});
-//   // for R value , template type passed to forward, should be  Lvalue, just Abdu in this c ase
+//   // for an rvalue, the template type passed to forward should be an lvalue reference, just Abdu in this case
 //   return 0;
 // }

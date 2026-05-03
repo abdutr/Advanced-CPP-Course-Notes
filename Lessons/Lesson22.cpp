@@ -68,7 +68,7 @@
 //     auto res = ranges::find(iVec,6);
 
 //     auto iVecView = views::take(iVec,4); // This function is a range adaptor, functions which convert to view/range
-//     // Specific type returned is dependant on input types, so it is more advantageous to use than direct
+//     // Specific type returned is dependent on input types, so it is more advantageous to use than direct
 //     // usage of ranges::take_view<>
     
 //     for(int i : views::take(iVec,4)){
@@ -81,9 +81,9 @@
 //         return x%3 == 0;
 //     }); // No function is called here
 
-//     auto iter = filter.begin() ; // Function is called here, is this is commented out abdu wont be printed
+//     auto iter = filter.begin() ; // Function is called here; if this is commented out, abdu won't be printed
 
-//     // Range adaptor are composable , so 
+//     // Range adaptors are composable, so 
 
 //     // lets say we want to create a vec from iVec which includes square of even elements
 

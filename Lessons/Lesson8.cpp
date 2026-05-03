@@ -91,7 +91,7 @@
 //     std::optional<std::string> op3{std::string{}};// String will be constructed and moved to optional
 //     // If string did not have move constructor, it would be copied, there is a better option
 //     std::optional<std::string> op4{std::in_place}; // No copy, no move, string is constructed in place
-//     //Arguments after std::inplace are perfect forwarded to std::string constructor
+//     // Arguments after std::in_place are perfectly forwarded to the std::string constructor
 //     std::optional<std::string> op5{std::in_place,6,'A'};
 
 //     auto op6{std::make_optional<std::string>(6,'A')}; // Same as above
@@ -183,7 +183,7 @@
     
 //     double* value = get_if<double>(&var7);// Returns double* when type is double
 //     // Normally we use visit, but without it we can have multiple if statements to do 
-//     // different actions depeding on type using holds_alternative() or index().
+//     // different actions depending on the type using holds_alternative() or index().
 //     variant<bool,string> var8("abdu"); // This holds bool in C++17, string in C++20+
 
 //     enum idx: size_t{age,wage,name};

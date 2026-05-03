@@ -17,7 +17,7 @@
 // #include "utils.hpp"
 
 // void func(std::string str){
-//   // No need to speccify std::reverse here
+//   // No need to specify std::reverse here
 //   // Argument is in std, so argument dependent lookup will find it
 //   reverse(str.begin(), str.end());
 // }
@@ -131,7 +131,7 @@
 // auto main() -> int {
 //   std::initializer_list<int> myList{1,2,3,4,5};
 //   // Initializer list has an array internally and values between {} are copied to the array
-//   // Due to copy containers storing move only types cant be initialized with initializer list
+//   // Due to copying, containers storing move-only types cannot be initialized with an initializer list
 //   constexpr auto sizeInitList = sizeof(myList);// 16 on 64 bit system
 //   // Init list only holds 2 pointer -> begin,end, interface provides begin,end,size
 
@@ -183,14 +183,14 @@
 //   std::vector<int> ivec(10);
 //   std::iota(ivec.begin(), ivec.end(), 0); 
 //   // Fills ivec with    0,1,2,3,4,5,6,7,8,9
-//   // Lets saw we want:      0,1,2,3,4
+//   // Let's say we want:     0,1,2,3,4
 //   utils::print(ivec);
 //   std::copy_backward(ivec.begin(),ivec.begin()+5,ivec.begin()+7);
 //   utils::print(ivec);
 //   // normal copy ( forward one) could not be used here, it would overwrite copied data
 
 //   // std::move_iterator<std::vector<int>::iterator> moveIter(ivec.begin());
-//   std::move_iterator moveIter(ivec.begin());// Instead of above this works thank to 
+//   std::move_iterator moveIter(ivec.begin());// Instead of above this works thanks to
 //   // Class template argument deduction (CTAD) C++17
 
 //   auto mIter = std::make_move_iterator(ivec.begin());
@@ -205,9 +205,9 @@
 //   //Need to be careful with move iterators:
 //   std::for_each(std::make_move_iterator(svec3.begin()),std::make_move_iterator(svec3.end()),
 //   // [](std::string str){ // This will cause all string to be moved not what we want
-//   // [](std::string& str){ // This is error cant bind rvalue ref to lvalue ref 
+//   // [](std::string& str){ // This is an error; cannot bind rvalue ref to lvalue ref
 //   [](std::string&& str){ // This works as expected
-//     if(str.contains("d")){ // C++23 has contains ffinaly
+//     if(str.contains("d")){ // C++23 finally has contains
 //       doSomething(std::move(str));
 //     }
 //   });
@@ -222,7 +222,7 @@
 //   // if you want postfix under number
 //   // operator""_m(unsigned long long x){
 //   // 7823_m -> 7823 is passed as integer to operator
-//   // This was is called "Cooked"
+//   // This is called "Cooked"
 
 //   // operator""_m(const char *p)
 //   // then operator""_m("7823") -> "7823" is passed as const char* to operator

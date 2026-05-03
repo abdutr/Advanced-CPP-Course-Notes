@@ -52,7 +52,7 @@
 // template<typename T>
 // class MyClass{
 // public:
-// // If send "abdu" as r parametere mx would be char[4] due to reference if we dont 
+// // If we send "abdu" as r, mx would be char[4] due to the reference if we don't
 // // provide deduction guide
 // MyClass(const T& r):mx{r}{}
 // private:
@@ -65,7 +65,7 @@
 // template<typename T>
 // class MyClass2{
 // public:
-// // If send "abdu" as r parametere mx would be char[4] due to reference if we dont 
+// // If we send "abdu" as r, mx would be char[4] due to the reference if we don't
 // // provide deduction guide
 // MyClass2(const T& r):mx{r}{}
 // private:
@@ -76,7 +76,7 @@
 // template<std::integral T>
 // MyClass2(T) -> MyClass2<unsigned long long>;
 
-// // const char* provided instantioans will create MyClass2<std::string>
+// // const char* provided instantiations will create MyClass2<std::string>
 // MyClass2(const char*) -> MyClass2<std::string>;
 
 // template <typename T>
@@ -132,7 +132,7 @@
 //     set set2{{1,3,5,7}, [](int a,int b){return b<a;}};
 //     std::vector<int> bigVec{100000};
 //     func(ref(bigVec)); // Sometimes we may want to pass as reference even though func takes it by value
-//     // To avoid copy , or ensure sended var is updated, not the copy .
+//     // To avoid a copy, or ensure the sent variable is updated, not the copy.
 
 //     // for_each() returns callable.
 //     vector<int> vec(1000, 5);
@@ -201,11 +201,11 @@
 //     // d, xVal are not necessarily reference, it can be macro or anything compiler uses instead
 
 //     auto [val1,val2,val3] = funcReturnArray();
-//     //if a function trying to use struct. decomp. with class which has private member variable
-//     // it can do it , only when class declares funtion private
+//     // if a function tries to use structured decomposition with a class that has private member variables
+//     // it can do it only when the class declares the function private
 
 //     Point p1(1,7,9);
-//     auto [p1x,p1y,p1z] = p1; // Need to have equal length so leftside should have 3 identifier
+//     auto [p1x,p1y,p1z] = p1; // Needs equal length, so the left side should have 3 identifiers
 
 //     int iVar;
 //     double dVar;
@@ -216,7 +216,7 @@
 //     // Best/most popular usage is function return type with pair tuple
 //     set<int> numSet{56,67,78,12};
 //     if(auto [iter,inserted] = numSet.insert(5);inserted){
-//         fmt::print("InsertionSuccessfull\n");
+//         fmt::print("InsertionSuccessful\n");
 //     }
 
 // }    

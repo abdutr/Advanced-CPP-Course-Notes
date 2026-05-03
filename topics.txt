@@ -14,7 +14,7 @@ Lesson 13:
 Lesson 14: 
 Lesson 15: 
 Lesson 16: 
-Lesson 17: Consteval, Constinit, No Discard , !!!CONCEPTS!!!
+Lesson 17: Consteval, Constinit, Nodiscard, !!!CONCEPTS!!!
 Lesson 18: Concepts
 Lesson 19: Concept End, C++ bit header/functions
 Lesson 20: C++20 Changes (deprecated,maybe_unused etc.) , Ranges 1

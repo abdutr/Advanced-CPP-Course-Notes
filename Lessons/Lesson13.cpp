@@ -60,7 +60,7 @@
 //     }
 //  };
 
-// // Lamdas can capture variadic input variables no problem,
+// // Lambdas can capture variadic input variables with no problem,
 // //  but init capture support is added with C++20
 //  template<typename... Args>
 //  auto delay_invoke_foo(Args... args){
@@ -71,13 +71,13 @@
 
 // auto main() -> int {
 
-// // using std::function to receive lamda is not as performant as lambda
+// // using std::function to receive a lambda is not as performant as using the lambda directly
 // // std::function may do dynamic allocation and will use more memory than lambda
 // // It is better to use alternatives instead of std::function if possible
 
 // // Lambda is local, can (kindof) bypass lack of nested functions in C++
 // // Templates cannot be local , so lambda can be used inside a function etc.
-// // Lambda is advatantegous as it makes inlining and optimization easier for compiler
+// // Lambda is advantageous as it makes inlining and optimization easier for the compiler
 
 
 //     print("1 ","2\n");
@@ -118,7 +118,7 @@
 //     }
 //     );
 
-//     // Option 1 is faster as str + "Ciprian" is only computed once online option 2
+//     // Option 1 is faster as str + "Ciprian" is only computed once; unlike option 2,
 //     // calculating it for 1000 times.
 
 //     auto throwingFunc = [](int x)  { return x*5;};
@@ -163,7 +163,7 @@
 //         return abs(a) < abs(b);
 //     };
 //     set<int,decltype(comparator)> x; // Works in C++20
-//     set<int,decltype(comparator)> x2(comparator); // Needee in C++17
+//     set<int,decltype(comparator)> x2(comparator); // Needed in C++17
 
 //     // Now lambdas can be used in unevaluated context
 //     // set<int,decltype(//define lambda here)> x; // Works in C++20

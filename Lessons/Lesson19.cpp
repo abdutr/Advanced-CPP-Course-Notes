@@ -70,7 +70,7 @@
 
 // template<typename T>
 // void funcWithDependentTypeArg(typename T::value_type){  // Only typename works here, we cant write class
-// // typename is required above to distinguish between class static member var or dependant type
+// // typename is required above to distinguish between a class static member var or a dependent type
 // }
 
 // template<typename T>
@@ -171,7 +171,7 @@
 
 //     int x = -1;
 
-//     x <<=1 ; // Was UB before c++20, not it is not with C++20
+//     x <<=1 ; // Was UB before C++20; now it is not with C++20
 //     fmt::print("{0:032b} {0}\n",x);
 //     x =-1;
 //     x >> 1; // This was implementation defined in C and C++17, implementation could do logical/arithmetic right shift
@@ -209,7 +209,7 @@
 
 //     auto isXPowerOf2 = x && !(x && (x-1)); // Check if x != 0 and x & (x-1) = 0
 
-//     // There is conexpr C++20 func doing it now
+//     // There is a constexpr C++20 function doing it now
 //     // Most of the following requires unsigned type, they are restrained for this
 //     fmt::print("Is power of 2 {} : {}\n",uint16Val, has_single_bit(uint16Val));
 //     fmt::print("Is power of 2 {} : {}\n",256, has_single_bit(256u));
@@ -217,9 +217,9 @@
 //     countl_zero(5u); // Count leading 0s
 //     fmt::print("Count leading 0 {}\n",countl_zero(uint16Val));
 //     fmt::print("Count leading 1 {}\n",countl_one(uint32_t(0b1111'0000'0000'0000'1111'0000'0000'0000)));
-//     fmt::print("Numbber of bits that are set(1) {}\n",popcount(uint32_t(0b1111'0000'0000'0000'1111'0000'0000'0000)));
-//     fmt::print("Bitwith  {}\n",bit_width(uint32_t(0b1111'0000'0000'0000'1111'0000'0000'0000)));
-//     fmt::print("Bitwith  {}\n",bit_width(uint32_t(0b0000'0000'0000'0000'1111'0000'0000'0000)));
+//     fmt::print("Number of bits that are set(1) {}\n",popcount(uint32_t(0b1111'0000'0000'0000'1111'0000'0000'0000)));
+//     fmt::print("Bit width  {}\n",bit_width(uint32_t(0b1111'0000'0000'0000'1111'0000'0000'0000)));
+//     fmt::print("Bit width  {}\n",bit_width(uint32_t(0b0000'0000'0000'0000'1111'0000'0000'0000)));
 
 //     constexpr float e = 2.71828f;
 //     float e2 = 2.71828f;
@@ -244,7 +244,7 @@
 //     // constexpr auto uVal2 = bit_cast<unsigned long long, float>(e); // sizes are different between ull and f so error
 
 //     // endianness test could be done in runtime.
-//     // How to check if systyem is big/little endian
+//     // How to check if the system is big/little endian
 
 //     int intValX = 1;
 //     if(*(char *)&intValX){

@@ -185,7 +185,7 @@
 //     vector myvec(myList.begin(),myList.end()); // vector<int> ,not vector<iter>, Thanks to deduction guide  
 //     // template<typename Iter> vector(Iter,Iter) -> vector<typename iterator_traits<Iter>::value_type>;
 
-//     //Overloader idiom, Overlaoded class needs deduction guide on C++17, for 20 + no need for aggregate types
+//     // Overloader idiom, overloaded class needs a deduction guide in C++17; for 20+ there is no need for aggregate types
 //     // template<typename ...Args> Overload2(Args...) -> Overload2<Args...>;
 //     variant <int,double,long,string,char> varX{"Abdu"};
 //     visit(Overload2{
@@ -206,11 +206,11 @@
 //     using oneIndexType = variant_alternative_t<1,vType>; // double
 
 //     // Variant can be used for error handling code for example
-//     // enum ErrorType{sytem,archive,log};
+//     // enum ErrorType{system,archive,log};
 //     // std::variant<Data,ErrorType> foo()
     
 //     // Variant can be used instead of dynamic polymorphism to avoid having vPtr, vTable (memory)
-//     // dereferensing when accessing ( runtime), dynamic memory allocation ( high runtime cost)
+//     // dereferencing when accessing (runtime), dynamic memory allocation (high runtime cost)
 //     // There are considerations if class structure is mostly predetermined static polymorphism via variant can be good
 //     // If it is more "agile" dynamic polymorphism can be good, but more complex than these 2 (memory, code usability etc.)
 

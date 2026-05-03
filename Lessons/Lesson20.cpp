@@ -39,7 +39,7 @@
 
 // using namespace std;
 
-// struct [[deprecated("Use strcut AbduV2" )]] Abdu{
+// struct [[deprecated("Use struct AbduV2" )]] Abdu{
 //     int a,b,c;
 // };
 
@@ -87,7 +87,7 @@
 // using TypeIdentity_t = TypeIdentity<T>::type;
 
 // template<typename T>
-// void func(T x,TypeIdentity_t<T> y){ // if we want x type to be deducted, and want y to have same time
+// void func(T x,TypeIdentity_t<T> y){ // if we want x type to be deduced, and want y to have the same type
 //     // Std already has functionality for above : std::type_identity_t< Tp>
 // }
 
@@ -111,7 +111,7 @@
 
 // void algo(std::ranges::input_range auto&&){
 //     fmt::print("input_range\n");
-// } // Subsume range concept 
+// } // Subsumes range concept 
 
 // void algo(std::ranges::forward_range auto&&){
 //     fmt::print("forward_range\n");
@@ -193,13 +193,13 @@
 
 //     namespace rng = std::ranges;
 
-//     // Necati ergin says range are very advantageous and efficient
+//     // Necati Ergin says ranges are very advantageous and efficient
 //     // However need to learn quite a lot and hard to debug until we learn
 //     // all the tools and details
 
-//     // 1.Ranges are concept constrained instead of old style sfinae, so much better error messages
-//     // 2.Most of the Declaration are different from old versions
-//     // 3.Algorithms take container instead of begin/end iter
+//     // 1. Ranges are concept-constrained instead of old-style sfinae, so much better error messages
+//     // 2. Most of the declarations are different from old versions
+//     // 3. Algorithms take containers instead of begin/end iterators
 //     vector<int> iVec2{5,7,2,1,6,3,87,3};
 //     ranges::sort(iVec2);
 //     utils::print(iVec2);
